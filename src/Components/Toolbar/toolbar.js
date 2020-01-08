@@ -1,4 +1,5 @@
- import React from "react";
+import React from "react";
+
 import {
   BrowserRouter as Router,
   Route,
@@ -6,7 +7,7 @@ import {
 } from "react-router-dom";
 
 import Home from '../HomePage/home';
-import Resume from '../Resume/resume';
+import Resume from '../Resume/resume'
 
 import './toolbar.css';
 

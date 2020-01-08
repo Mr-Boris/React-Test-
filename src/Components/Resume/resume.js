@@ -4,7 +4,7 @@ export default class Resume extends React.Component {
    render() {
       return (
          <div>
-            helo
+            <p>{this.props.username}</p>         
          </div>
       );
    }
