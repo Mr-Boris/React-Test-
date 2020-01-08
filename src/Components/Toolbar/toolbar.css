@@ -1,0 +1,28 @@
+.toolbar {
+   height: 70px;
+   background: #090E1E;
+}
+
+.navigation ul {
+   margin: 0;
+   padding: 0;
+   display: flex;
+   list-style: none;
+   justify-content: center;
+}
+
+.navigation a {
+   color: #fff;
+   font-size: 20px;
+   font-weight: bold;
+   text-decoration: none;
+}
+
+.navigation li {
+   padding: 0 12px;
+   margin-top: 22px;
+}
+.component {
+   margin-left: 36%;
+   margin-top: 8%; 
+}
