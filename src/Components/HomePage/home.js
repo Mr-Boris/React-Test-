@@ -2,30 +2,65 @@ import React from 'react';
 
 import './home.css';
 
+import NumberFormat from 'react-number-format';
 
-export default class Resume extends React.Component {
+import {
+  BrowserRouter as Router,
+  Route,
+  Link,
+} from "react-router-dom";
+
+export default class Home extends React.Component {
    constructor (props) {
       super(); 
       this.state = {
-         username: ''
+         bio: null,
+         name: null,
+         blog: null,
+         avatar_url: null,
+         created_at: null,
+         public_repos: null,
       }
    }
 
    getUser(username) {
-      
-       return  fetch(`https://api.github.com/users/${username}`)
-      .then(response => response.json())
-      .then(response => {
+      return  fetch(`https://api.github.com/users/${username}`)
+       .then(response => response.json())
+       .then(response => {
           console.log(response);
           return response;
       })
    }
    
-    async  handleSubmit (e) {
+   async handleSubmit (e) {
       e.preventDefault();
       let user = await this.getUser(this.refs.username.value);
+      this.setState({
+         bio: user.bio,
+         name: user.name,
+         blog: user.blog,
+         avatar_url: user.avatar_url,
+         created_at: user.created_at,
+         public_repos: user.public_repos,
+      })
    }
+
    render() {
+
+      let user;
+
+      if(this.state.name) {
+         user = 
+            <div className='user'>
+               <div className='divUser'>
+                  <p className='pUser'>Public repositories {this.state.public_repos} </p>
+                  <p className='bioUser'>{this.state.bio}</p>
+                  <div className='userImg'>
+                     <img src={this.state.avatar_url} />
+                  </div> 
+               </div>
+            </div>
+      }
       return (
          <div className='container' >
             <div className='formUser'>
@@ -37,13 +72,15 @@ export default class Resume extends React.Component {
                         type='text'
                         placeholder='Username' />
                       <div className='buttonDiv'>
-                        <button className='button'>Click Me</button>
+                        <div><button className='button'>Submit</button></div>
                       </div>
                   </form>
+               </div>
+               <div>
+                  {user}
+               </div>
             </div>
          </div>
-      </div>
-
       );
    }
 }
