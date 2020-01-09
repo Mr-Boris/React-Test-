@@ -2,13 +2,6 @@ import React from 'react';
 
 import './home.css';
 
-import NumberFormat from 'react-number-format';
-
-import {
-  BrowserRouter as Router,
-  Route,
-  Link,
-} from "react-router-dom";
 
 export default class Home extends React.Component {
    constructor (props) {
@@ -56,7 +49,7 @@ export default class Home extends React.Component {
                   <p className='pUser'>Public repositories {this.state.public_repos} </p>
                   <p className='bioUser'>{this.state.bio}</p>
                   <div className='userImg'>
-                     <img src={this.state.avatar_url} />
+                     <img src={this.state.avatar_url} alt='' />
                   </div> 
                </div>
             </div>
