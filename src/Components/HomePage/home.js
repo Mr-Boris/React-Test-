@@ -1,41 +1,24 @@
 import React from 'react';
 
 import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
+
+import { getUser, updateUsername } from '../../actions/user';
 
 import './home.css';
 
-export default class Home extends React.Component {
+class Home extends React.Component {
    constructor (props) {
       super(); 
       this.state = {
-         bio: null,
-         name: null,
-         blog: null,
-         avatar_url: null,
-         created_at: null,
-         public_repos: null,
+         username: ''
       }
    }
 
-   getUser(username) {
-      return  fetch(`https://api.github.com/users/${username}`)
-       .then(response => response.json())
-       .then(response => {
-          console.log(response);
-          return response;
-      })
-   }
-   
    async handleSubmit (e) {
       e.preventDefault();
-      let user = await this.getUser(this.refs.username.value);
-      this.setState({
-         bio: user.bio,
-         name: user.name,
-         blog: user.blog,
-         created_at: user.created_at,
-         public_repos: user.public_repos,
-      })
+      let user = await this.props.getUser(this.refs.username.value);
+      this.setState({username: user.login})
    }
 
    render() {
@@ -45,8 +28,10 @@ export default class Home extends React.Component {
                <div className='div'>
                   <form onSubmit={e => this.handleSubmit(e)} className='inputDiv'>
                      <p>Input GitHub Username</p>
-                     <input
+                     <input 
                         ref='username'
+                        value={this.props.user.username}
+                        onChange={username => this.props.updateUsername(username)}
                         type='text'
                         placeholder='Username' />
                       <div className='buttonDiv'>
@@ -54,8 +39,24 @@ export default class Home extends React.Component {
                       </div>
                   </form>
                </div>
+               <h1>{this.state.username}</h1>
+               <h1>{this.props.user.username}</h1>
+               
             </div>
          </div>
       );
    }
 }
+
+const mapDispatchToProps = dispatch => {
+    return bindActionCreators({ getUser, updateUsername }, dispatch)
+}
+
+const mapStateToProps = state => {
+  return {
+    user: state
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Home)
+

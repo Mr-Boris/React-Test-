@@ -7,14 +7,14 @@ import { connect } from 'react-redux'
  class Resume extends React.Component {
    render() {
 
-      const {name} = this.props.user;
+      const {username} = this.props.user;
 
       return (
          <div className='container' >
             <div className='resume'>
                <header className='nameBio'>
                   <div className='nameBio'>
-                     <h1>{name} </h1>
+                     <h1>{username} </h1>
                      <h2>PASSIONATE GITHUB USER</h2>
                      <hr />
                   </div>
@@ -55,7 +55,7 @@ import { connect } from 'react-redux'
    }
 }
 
-function mapStateToProps (state) {
+const mapStateToProps = state => {
   return {
     user: state
   }
