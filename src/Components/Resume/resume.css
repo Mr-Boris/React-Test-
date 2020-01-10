@@ -1,0 +1,72 @@
+
+.resume {
+   width: 900px;
+   height: 900px;
+   background: #fff;
+}
+
+.nameBio {
+}
+
+.nameBio h1 {
+   margin-left: 7%;
+   font-weight: normal;
+}
+
+.nameBio h2 {
+   margin-left: 7%;
+   font-style: italic;
+   font-weight: normal;
+}
+
+.gitProfile h3 {
+   margin-top: 3%;
+   margin-left: 7%;
+   font-style: italic;
+   font-weight: normal;
+}
+
+.site h3 {
+   margin-top: 3%;
+   margin-left: 7%;
+   font-style: italic;
+   font-weight: normal;
+}
+
+.lang h3 {
+   margin-top: 3%;
+   margin-left: 7%;
+   font-style: italic;
+   font-weight: normal;
+}
+.poprep h3 {
+   margin-top: 3%;
+   margin-left: 7%;
+   font-style: italic;
+   font-weight: normal;
+}
+.contrib h3 { 
+   margin-top: 3%;
+   margin-left: 7%;
+   font-style: italic;
+   font-weight: normal;
+}
+
+.organiz h3 { 
+   margin-top: 3%;
+   margin-left: 7%;
+   font-style: italic;
+   font-weight: normal;
+}
+
+.about h3 {
+   margin-top: 3%;
+   margin-left: 7%;
+   font-style: italic;
+   font-weight: normal;
+}
+
+hr {
+   width: 85%;
+   margin-top: 3%;
+}

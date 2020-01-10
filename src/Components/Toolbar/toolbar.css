@@ -22,7 +22,16 @@
    padding: 0 12px;
    margin-top: 22px;
 }
-.component {
-   margin-left: 37%;
-   margin-top: 4%; 
+.Home {
+   display: flex;
+   margin-top: 7%; 
+   align-items: center;
+   justify-content: center;
+}
+.Resume {
+   display: flex;
+   margin-top: -5%; 
+   align-items: center;
+   justify-content: center;
+
 }

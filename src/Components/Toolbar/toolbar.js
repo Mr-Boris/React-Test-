@@ -21,9 +21,11 @@ export default function Toolbar() {
                      <li><Link to='/home'>Home</Link></li>
                      <li><Link to='/resume'>Resume</Link></li>
                   </ul>
-                  <div className='component'>
+                  <div className='Home'>
                      <Route exact path='/home' component={Home} />
-                     <Route path='/resume' component={Resume} />
+                  </div>
+                  <div className='Resume'>
+                     <Route exact path='/resume' component={Resume} />
                   </div>
                </div>
             </Router>

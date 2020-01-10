@@ -2,7 +2,6 @@ import React from 'react';
 
 import './home.css';
 
-
 export default class Home extends React.Component {
    constructor (props) {
       super(); 
@@ -32,28 +31,12 @@ export default class Home extends React.Component {
          bio: user.bio,
          name: user.name,
          blog: user.blog,
-         avatar_url: user.avatar_url,
          created_at: user.created_at,
          public_repos: user.public_repos,
       })
    }
 
    render() {
-
-      let user;
-
-      if(this.state.name) {
-         user = 
-            <div className='user'>
-               <div className='divUser'>
-                  <p className='pUser'>Public repositories {this.state.public_repos} </p>
-                  <p className='bioUser'>{this.state.bio}</p>
-                  <div className='userImg'>
-                     <img src={this.state.avatar_url} alt='' />
-                  </div> 
-               </div>
-            </div>
-      }
       return (
          <div className='container' >
             <div className='formUser'>
@@ -68,9 +51,6 @@ export default class Home extends React.Component {
                         <div><button className='button'>Submit</button></div>
                       </div>
                   </form>
-               </div>
-               <div>
-                  {user}
                </div>
             </div>
          </div>
