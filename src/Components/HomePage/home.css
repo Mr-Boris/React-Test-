@@ -52,16 +52,6 @@
    align-items: center;
 }
 
-.pUser {
-   color: #fff;
-   font-size: 24px;
-   font-weight: bold;
-}
-.userImg img {
-   height: 200px;
-   width: 200px;
-   border-radius: 20px;
-}
 p {
    color: #fff;
    font-size: 24px;
@@ -76,3 +66,23 @@ input {
    border-radius: 12px;
    border-color: #090E1E;
 }
+
+@media (max-width: 600px) {
+   .formUser {
+      width: 350px;
+      height: 350px;
+      margin-top: 3%;
+   }
+   .button {
+      margin-left: 0px;
+   }
+   input {
+      height: 25px;
+      font-size: 16px; 
+      margin-left: 0px;
+   }
+   p {
+      font-size: 20px;
+   }
+}
+

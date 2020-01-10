@@ -1,4 +1,3 @@
-
 .resume {
    width: 900px;
    height: 900px;
@@ -69,4 +68,36 @@
 hr {
    width: 85%;
    margin-top: 3%;
+}
+
+@media (max-width: 1000px) {
+   .resume {
+      width: 800px;
+      height: 900px;
+   }
+}
+@media (max-width: 835px) {
+   .resume {
+      width: 700px;
+      height: 900px
+   }
+}
+
+@media (max-width: 740px) {
+   .resume {
+      width: 600px;
+      height: 800px;
+   }
+}
+@media (max-width: 640px) {
+   .resume {
+      width: 550px; 
+      height: 700px;
+   }
+}
+@media (max-width: 540px) {
+   .resume {
+      width: 450px;
+      height: 600px;
+   }
 }
