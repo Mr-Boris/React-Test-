@@ -1,14 +1,20 @@
 import React from 'react';
+
 import './resume.css';
 
-export default class Resume extends React.Component {
+import { connect } from 'react-redux'
+
+ class Resume extends React.Component {
    render() {
+
+      const {name} = this.props.user;
+
       return (
          <div className='container' >
             <div className='resume'>
                <header className='nameBio'>
                   <div className='nameBio'>
-                     <h1>Name </h1>
+                     <h1>{name} </h1>
                      <h2>PASSIONATE GITHUB USER</h2>
                      <hr />
                   </div>
@@ -48,4 +54,12 @@ export default class Resume extends React.Component {
       );
    }
 }
+
+function mapStateToProps (state) {
+  return {
+    user: state
+  }
+}
+
+export default connect(mapStateToProps)(Resume)
 
