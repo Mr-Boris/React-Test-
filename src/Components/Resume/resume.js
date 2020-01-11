@@ -7,15 +7,12 @@ import { connect } from 'react-redux'
  class Resume extends React.Component {
    render() {
 
-      const {username} = this.props.user;
 
       return (
          <div className='container' >
             <div className='resume'>
                <header className='nameBio'>
                   <div className='nameBio'>
-                     <h1>{username} </h1>
-                     <h2>PASSIONATE GITHUB USER</h2>
                      <hr />
                   </div>
                </header>
@@ -25,7 +22,7 @@ import { connect } from 'react-redux'
                      <hr />
                   </div>
                   <div className='site'>  
-                     <h3>Website</h3>
+                     <h3>Website {this.props.user.blog}</h3>
                      <hr />
                   </div>
                   <div className='lang'>
@@ -55,11 +52,10 @@ import { connect } from 'react-redux'
    }
 }
 
-const mapStateToProps = state => {
-  return {
-    user: state
-  }
-}
+
+const mapStateToProps = state => ({
+   user: state.user.currentUser,
+});
 
 export default connect(mapStateToProps)(Resume)
 

@@ -1,9 +1,8 @@
 import React from 'react';
 
-import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
+import { connect } from 'react-redux';
 
-import { getUser, updateUsername } from '../../actions/user';
+import { searchUser } from '../../store/actions/user';
 
 import './home.css';
 
@@ -15,10 +14,14 @@ class Home extends React.Component {
       }
    }
 
-   async handleSubmit (e) {
+   handleSubmit = async (e) => {
       e.preventDefault();
-      let user = await this.props.getUser(this.refs.username.value);
-      this.setState({username: user.login})
+      await this.props.searchUser(this.state.username);
+   }
+
+   handleChange = (e) => {
+      const { name, value } = e.target;
+      this.setState({ [name]: value });
    }
 
    render() {
@@ -26,37 +29,30 @@ class Home extends React.Component {
          <div className='container' >
             <div className='formUser'>
                <div className='div'>
-                  <form onSubmit={e => this.handleSubmit(e)} className='inputDiv'>
+                  <form onSubmit={this.handleSubmit} className='inputDiv'>
                      <p>Input GitHub Username</p>
                      <input 
-                        ref='username'
-                        value={this.props.user.username}
-                        onChange={username => this.props.updateUsername(username)}
+                        name='username'
+                        value={this.state.username}
+                        onChange={this.handleChange}
                         type='text'
-                        placeholder='Username' />
+                        placeholder='Username'
+                     />
                       <div className='buttonDiv'>
                         <div><button className='button'>Submit</button></div>
                       </div>
                   </form>
                </div>
-               <h1>{this.state.username}</h1>
-               <h1>{this.props.user.username}</h1>
-               
+               {console.log(this.props)}
             </div>
          </div>
       );
    }
 }
 
-const mapDispatchToProps = dispatch => {
-    return bindActionCreators({ getUser, updateUsername }, dispatch)
-}
+const mapStateToProps = state => ({
+   user: state.user.currentUser,
+});
 
-const mapStateToProps = state => {
-  return {
-    user: state
-  }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(Home)
+export default connect(mapStateToProps, { searchUser })(Home)
 
