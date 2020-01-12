@@ -7,8 +7,7 @@ import {
 } from "react-router-dom";
 
 import Home from '../HomePage/home';
-import Resume from '../Resume/resume'
-
+import Resume from '../Resume/resume';
 import './toolbar.css';
 
 export default function Toolbar() {
@@ -19,7 +18,6 @@ export default function Toolbar() {
                <div className='navigation'>
                   <ul>
                      <li><Link to='/'>Home</Link></li>
-                     <li><Link to='/resume'>Resume</Link></li>
                   </ul>
                   <div className='Home'>
                      <Route exact path='/' component={Home} />
