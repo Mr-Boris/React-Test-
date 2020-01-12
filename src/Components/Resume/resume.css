@@ -348,6 +348,65 @@
    }
 }
 
+@media (max-width: 420px) {
+   .logoDiv {
+      width: 350px;
+      height: 120px;
+      margin-top: 5%;
+   }
+   .resumeDiv {
+      width: 350px;
+   }
+   .avatarDiv img {
+      height: 150px;
+      width: 150px;
+   }
+   .mainGit {
+      width: 350px;
+   }
+   .mainGit h2 {
+      font-size: 19px;
+   }
+   .mainSite {
+      width: 350px;
+   }
+   .mainSite h2 {
+      font-size: 19px;
+   }
+   .mainLang {
+      width: 350px;
+   }
+   .mainLang h2 {
+      font-size: 19px;
+   }
+   .mainPopRep {
+      width: 350px;
+   }
+   .mainPopRep h2 {
+      font-size: 19px;
+   }
+   .mainContri {
+      width: 350px;
+   }
+   .mainContri h2 {
+      font-size: 19px;
+   }
+   .mainOrg {
+      width: 350px;
+   }
+   .mainOrg h2 {
+      font-size: 19px;
+   }
+   .mainAbout {
+      height: 500px;
+      width: 350px;
+   }
+   .mainAbout h2{ 
+      font-size: 19px;
+   }
+}
+
+
 
 
 

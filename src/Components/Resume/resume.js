@@ -30,7 +30,7 @@ import Moment from 'react-moment';
                      <h2>GitHub <br /> Profile</h2>
                   </div>
                   <div className='momentDiv'>
-                   <h2> On GitHub with <Moment format={'YYYY'}>{this.props.user.created_at}</Moment>, {this.props.user.name} is a developer with <a href={this.props.user.html_url}>{this.props.user.public_repos} public repositories</a> and <a href={this.props.user.html_url}>{this.props.user.followers} followers.</a></h2>
+                   <h2> On GitHub with <Moment format={'YYYY'}>{this.props.user.created_at}</Moment>, {this.props.user.name} is a developer with>{this.props.user.public_repos} public repositories and {this.props.user.followers} followers.</h2>
                   </div>
                </div>
             </div>
