@@ -23,7 +23,7 @@ export default function Toolbar() {
                      <Route exact path='/' component={Home} />
                   </div>
                   <div className='Resume'>
-                     <Route exact path='/resume' component={Resume} />
+                     <Route path='/resume' component={Resume} />
                   </div>
                </div>
             </Router>

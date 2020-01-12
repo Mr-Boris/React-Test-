@@ -33,5 +33,13 @@
    margin-top: -5%; 
    align-items: center;
    justify-content: center;
+}
 
+.Resume a {
+   color: #085982;
+}
+@media (max-width: 420px) {
+   .Resume a {
+      font-size: 19px;
+   }
 }

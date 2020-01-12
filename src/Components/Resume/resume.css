@@ -8,7 +8,6 @@
    border-radius: 32px;
 }
 
-
 .avatarDiv img {
   width: 250px;
   height: 250px;
@@ -84,9 +83,6 @@
 .momentDiv h2 {
    margin-left: 10%;
 }
-.momentDiv a {
-   background: #000000;
-}
 
 .mainSite {
    width: 1000px;
@@ -111,110 +107,6 @@
 }
 
 .blogDiv h2 {
-   margin-left: 35%;
-}
-
-.mainLang {
-   width: 1000px;
-   display: flex;
-   height: 200px;
-   margin-top: 1%;
-   background: #fff;
-   border-radius: 32px; 
-   justify-content: center;
-}
-
-.lang{
-   width: 80%;
-   height: 15%;
-   display: flex;
-   border-radius: 32px; 
-}
-
-.lang h2 {
-   font-size: 24px;
-   font-weight: 10px;
-}
-
-.langDiv h2 {
-   margin-left: 35%;
-}
-
-.mainPopRep {
-   width: 1000px;
-   display: flex;
-   height: 100px;
-   margin-top: 1%;
-   background: #fff;
-   border-radius: 32px; 
-   justify-content: center;
-}
-
-.popRep{
-   width: 80%;
-   height: 15%;
-   display: flex;
-   border-radius: 32px; 
-}
-
-.popRep h2 {
-   font-size: 24px;
-   font-weight: 10px;
-}
-
-.poRepDiv h2 {
-   margin-left: 35%;
-}
-
-.mainContri {
-   width: 1000px;
-   display: flex;
-   height: 70px;
-   margin-top: 1%;
-   background: #fff;
-   border-radius: 32px; 
-   justify-content: center;
-}
-
-.contri {
-   width: 80%;
-   height: 15%;
-   display: flex;
-   border-radius: 32px; 
-}
-
-.contri h2 {
-   font-size: 24px;
-   font-weight: 10px;
-}
-
-.contriDiv h2 {
-   margin-left: 35%;
-}
-
-.mainOrg {
-   width: 1000px;
-   display: flex;
-   height: 70px;
-   margin-top: 1%;
-   background: #fff;
-   border-radius: 32px; 
-   justify-content: center;
-}
-
-.org {
-   width: 80%;
-   height: 15%;
-   display: flex;
-   border-radius: 32px; 
-}
-
-.org h2 {
-   font-size: 24px;
-   font-weight: 10px;
-}
-
-.orgDiv h2 {
    margin-left: 35%;
 }
 
@@ -261,18 +153,6 @@
    .mainSite {
       width: 800px;
    }
-   .mainLang {
-      width: 800px;
-   }
-   .mainPopRep {
-      width: 800px;
-   }
-   .mainContri {
-      width: 800px;
-   }
-   .mainOrg {
-      width: 800px;
-   }
    .mainAbout {
       height: 300px;
       width: 800px;
@@ -296,19 +176,6 @@
    .mainSite {
       width: 600px;
    }
-
-   .mainLang {
-      width: 600px;
-   }
-   .mainPopRep {
-      width: 600px;
-   }
-   .mainContri {
-      width: 600px;
-   }
-   .mainOrg {
-      width: 600px;
-   }
    .mainAbout {
       height: 400px;
       width: 600px;
@@ -330,18 +197,6 @@
    .mainSite {
       width: 500px;
    }
-   .mainLang {
-      width: 500px;
-   }
-   .mainPopRep {
-      width: 500px;
-   }
-   .mainContri {
-      width: 500px;
-   }
-   .mainOrg {
-      width: 500px;
-   }
    .mainAbout {
       height: 500px;
       width: 500px;
@@ -351,8 +206,12 @@
 @media (max-width: 420px) {
    .logoDiv {
       width: 350px;
-      height: 120px;
+      height: 80px;
       margin-top: 5%;
+   }
+   .logoDiv img {
+      height: 80px;
+      width: 130px;
    }
    .resumeDiv {
       width: 350px;
@@ -361,6 +220,9 @@
       height: 150px;
       width: 150px;
    }
+   .nameDiv h1 {
+      font-size: 30px;
+   } 
    .mainGit {
       width: 350px;
    }
@@ -371,30 +233,6 @@
       width: 350px;
    }
    .mainSite h2 {
-      font-size: 19px;
-   }
-   .mainLang {
-      width: 350px;
-   }
-   .mainLang h2 {
-      font-size: 19px;
-   }
-   .mainPopRep {
-      width: 350px;
-   }
-   .mainPopRep h2 {
-      font-size: 19px;
-   }
-   .mainContri {
-      width: 350px;
-   }
-   .mainContri h2 {
-      font-size: 19px;
-   }
-   .mainOrg {
-      width: 350px;
-   }
-   .mainOrg h2 {
       font-size: 19px;
    }
    .mainAbout {
