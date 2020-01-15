@@ -8,6 +8,7 @@ import { connect } from 'react-redux'
 import Moment from 'react-moment';
 
  class Resume extends React.Component {
+
    render() {
       return (
          <div className='container' >
@@ -31,17 +32,33 @@ import Moment from 'react-moment';
                      <h2>GitHub <br /> Profile</h2>
                   </div>
                   <div className='momentDiv'>
-                   <h2> On GitHub with <Moment format={'YYYY'}>{this.props.user.created_at}</Moment>, {this.props.user.name} is a developer with <a href={this.props.user.html_url}> {this.props.user.public_repos} public repositories </a> and <a href={this.props.user.html_url}> {this.props.user.followers} followers. </a>  </h2>
+                     <h2> On GitHub with <Moment format={'YYYY'}>{this.props.user.created_at}</Moment>, {this.props.user.name} is a developer with <a href={this.props.user.html_url}> {this.props.user.public_repos} public repositories </a> and <a href={this.props.user.html_url}> {this.props.user.followers} followers. </a>  </h2>
                   </div>
                </div>
             </div>
             <div className='mainSite'>
                <div className='site'>
-                  <div>
-                     <h2> Website </h2>
-                  </div>
+                  <h2>Website</h2>
                   <div className='blogDiv'>
                      <h2><a href={this.props.user.blog}> {this.props.user.blog} </a></h2>
+                  </div>
+               </div>
+            </div>
+            <div className='mainRepo'>
+               <div className='repo'>
+                  <h2>Popular Repositories</h2>
+                  <div className='blogRepo'>
+                  </div>
+               </div>
+            </div>
+            <div className='mainOrg'>
+               <div className='org'>
+                  <h2>Organizations</h2>
+                   <div className='blogOrg'>
+                      {this.props.org.map((org, index) => {
+                        return <h2 key={index}>{org.login}</h2>
+                      })}
+                     <h2>If you would like more information about this organization, please visit the organization page on GitHub. </h2>
                   </div>
                </div>
             </div>
@@ -63,6 +80,8 @@ import Moment from 'react-moment';
 
 const mapStateToProps = state => ({
    user: state.user.currentUser,
+   org: state.org.currentOrgs,
+   repo: state.repo.currentRepos
 });
 
 export default connect(mapStateToProps)(Resume)

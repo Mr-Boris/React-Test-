@@ -107,8 +107,62 @@
 }
 
 .blogDiv h2 {
-   margin-left: 35%;
+   margin-left: 20%;
 }
+
+.mainRepo {
+   width: 1000px;
+   display: flex;
+   height: 500px;
+   margin-top: 1%;
+   background: #fff;
+   border-radius: 32px; 
+   justify-content: center;
+}
+
+.repo{
+   width: 80%;
+   height: 15%;
+   display: flex;
+   border-radius: 32px; 
+}
+
+.repo h2 {
+   font-size: 24px;
+   font-weight: 10px;
+}
+
+.blogRepo h2 {
+   margin-left: 20%;
+}
+
+
+.mainOrg {
+   width: 1000px;
+   display: flex;
+   height: 160px;
+   margin-top: 1%;
+   background: #fff;
+   border-radius: 32px; 
+   justify-content: center;
+}
+
+.org{
+   width: 80%;
+   height: 15%;
+   display: flex;
+   border-radius: 32px; 
+}
+
+.org h2 {
+   font-size: 24px;
+   font-weight: 10px;
+}
+
+.blogOrg h2 {
+   margin-left: 10%;
+}
+
 
 .mainAbout {
    width: 1000px;
@@ -133,7 +187,7 @@
 }
 
 .aboutDiv h2 {
-   margin-left: 15%;
+   margin-left: 18%;
 }
 
 
@@ -148,6 +202,9 @@
       width: 800px;
    }
    .mainGit {
+      width: 800px;
+   }
+   .mainOrg {
       width: 800px;
    }
    .mainSite {
@@ -173,6 +230,15 @@
       height: 150px;
       width: 600px;
    }
+
+   .mainRepo {
+      width: 600px;
+   }
+
+   .mainOrg{
+      width: 600px;
+   }
+
    .mainSite {
       width: 600px;
    }
@@ -188,12 +254,24 @@
       height: 130px;
       margin-top: 5%;
    }
+
    .resumeDiv {
       width: 500px;
    }
+
    .mainGit {
       width: 500px;
    }
+
+   .mainRepo {
+      width: 500px;
+   }
+
+   .mainOrg {
+      height: 300px;
+      width: 500px;
+   }
+
    .mainSite {
       width: 500px;
    }
@@ -229,10 +307,25 @@
    .mainGit h2 {
       font-size: 19px;
    }
+   .mainRepo {
+      width: 350px;
+   }
+   .mainRepo h2 {
+      font-size: 19px;
+   }
+
+   .mainOrg {
+      width: 350px;
+   }
+   .mainOrg h2 {
+      font-size: 19px;
+   }
+
    .mainSite {
       width: 350px;
    }
    .mainSite h2 {
+      margin-left: 4px;
       font-size: 19px;
    }
    .mainAbout {

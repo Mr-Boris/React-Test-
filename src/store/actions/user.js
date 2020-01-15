@@ -9,3 +9,4 @@ export const searchUser = (username) => async (dispatch) => {
     payload: response.data
   });
 }
+

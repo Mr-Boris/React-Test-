@@ -3,6 +3,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import { searchUser } from '../../store/actions/user';
+import { searchOrg } from '../../store/actions/org';
+import { searchRepo } from '../../store/actions/repo';
 import './home.css';
 
 
@@ -18,6 +20,8 @@ class Home extends React.Component {
    handleSubmit = async (e) => {
       e.preventDefault();
       await this.props.searchUser(this.state.username);
+      await this.props.searchOrg(this.state.username);
+      await this.props.searchRepo(this.state.username);
       // redirect to resume page, use react-router-dom
       this.props.history.push('./resume')
    }
@@ -55,7 +59,8 @@ class Home extends React.Component {
 
 const mapStateToProps = state => ({
    user: state.user.currentUser,
+   org: state.user.searchOrgs,
 });
 
-export default connect(mapStateToProps, {searchUser})(Home)
+export default connect(mapStateToProps, {searchUser, searchOrg, searchRepo})(Home)
 
